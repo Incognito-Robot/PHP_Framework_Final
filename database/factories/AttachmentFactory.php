@@ -26,13 +26,12 @@ class AttachmentFactory extends Factory
                 'user_id' => User::factory(),
                 'task_id' => Task::factory(), 
                 'file' => base64_encode($this->faker->text),
-                'filename' => $this->faker->file($sourceDir = '.', $targetDir = '/tmp', false), 
+                'filename' => $this->faker->word . ".txt", 
                 'type' => $this->faker->mimeType(),
                 'size' => 256,
                 'created_at' => now(),
                 'updated_at' => now(),
-    
-            ];
+                ];
         }
     }
 }
